@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Blog Titles{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>My Blog</h1>
+</div>
+<div><br></div>
+<div class="row">
+    <div class="col-md-8">
+        <ul>
+            {% for blog in blogs %}
+            <li>{{ blog.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-4">
+    <h2>About</h2>
+    <p>www.zhangzhixiong.com</p>
+    <img width="300px" height="200px" src={% static 'img/tsingtao.jpg' %} alt="tsingtao">
+    </div>
+</div>
+{% endblock %}
