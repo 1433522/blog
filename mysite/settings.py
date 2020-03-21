@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/blog/'
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
