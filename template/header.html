@@ -1,9 +1,20 @@
 {% load static %}
 <div class="container">
-    <nav class="navbar navbar-expand-sm bg-">
-        <ul class="navbar-nav navbar-right">
-            <li class="nav-item"><a class="navbar-link" href="{% url 'blog:blog_title' %}">BLOG</a></li>
-            <li class="nav-item"><a class="navbar-link" href="{% url 'account:user_login' %}">LOGIN</a></li>
-        </ul>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-header" href="#">ALex's Blog</a>
+            <a href="{% url 'blog:blog_title' %}" style="margin-left:20px">BLOG</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a href="#">{{ user.username }}</a></li>
+                <li><a href="{% url 'account:user_logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'account:user_login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        
     </nav>
 </div>
