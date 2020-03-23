@@ -27,6 +27,14 @@
             <label for="{{ form.password2.id_for_label }}" class="col-md-5 control-label" style="color:red">Confirm password</label>
             <div>{{ form.password2 }}</div>
         </div>
+        <div class="form-group">
+            <label for="{{ profile.birth.id_for_label }}" class="col-md-5 control-label" style="color:red">Birth Date</label>
+            <div>{{ profile.birth }}</div>
+        </div>
+        <div class="form-group">
+            <label for="{{ profile.phone.id_for_label }}" class="col-md-5 control-label" style="color:red">Phone</label>
+            <div>{{ profile.phone }}</div>
+        </div>
         <input type="submit" class="btn btn-primary btn-lg" value="REGISTER">
     </form>
 </div>
